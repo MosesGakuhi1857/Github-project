@@ -1,0 +1,17 @@
+<form (ngSubmit)="searchGithubUser()" id="search-form" #searchRef="ngForm">
+    <h4><u>Search The github user here:</u></h4>
+
+    <input type="text" name="githubUser" placeholder="Type the Github Username" [(ngModel)]="searchTerm">
+    <button type="submit" class="btn btn-success" (click)="searchGithubUser()">Search</button>
+</form>
+
+<ul>
+    {{data?.name}}
+    <div *ngFor="let repository of repositories; let i=index">
+        <li>
+        
+            <a href="{{repository?.html_url}}">{{repository?.name}}</a>
+        </li>
+    </div>
+
+</ul>
