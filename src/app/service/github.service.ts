@@ -11,6 +11,7 @@ import { Repository } from '../repository';
 export class GithubService {
 userCollectedDetails : User;
 userRepositories : Repository;
+// githubUserName:string
 
 
   constructor(private http :HttpClient) {
@@ -18,7 +19,7 @@ userRepositories : Repository;
     this.userRepositories = new Repository ("","","")
    }
 
-getUserNameRequest(githubUsername:User){
+getUserNameRequest(githubUsername:any){
  interface ApiResponse{
     name:string;
     location:string;
