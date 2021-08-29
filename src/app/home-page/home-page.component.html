@@ -1,17 +1,18 @@
 <div class="container">
     <div class="row">
-        <div class="card" style="width: 18rem;" col-6>
-            <img src="{{data?.avatar_url}}" class="card-img-top" alt="...">
+        <div class="card one" style="width: 18rem;" col-6>
+            <img src="{{data?.avatar_url}}" class="card-img-top" alt="user profile">
             <div class="card-body">
                 <div class="card-text">
                     <h3>{{data?.name}}</h3>
                     <div class="follow">
-                        <strong>{{data?.followers}}</strong> Followers
+                        <strong>{{data?.followers}}</strong> Followers |
                         <strong>{{data?.following}}</strong> Following
                     </div>
 
                 </div>
                 <p> {{data?.bio}} </p>
+                <p>{{data?.location}}</p>
             </div>
         </div>
         <div class="col-6">
@@ -20,7 +21,7 @@
             <div class="row">
                 <div class="col-6" *ngFor=" let repository of repositories; let i=index">
 
-                    <div class="card">
+                    <div class="card two">
                         <h5 class="card-header"> </h5>
                         <div class="card-body">
                           <h5 class="card-title">{{repository?.name}}</h5>
