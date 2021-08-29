@@ -1,0 +1,16 @@
+.container{
+    margin: auto;
+    margin-left: 200px;
+    position:relative;
+    top:100px;
+}
+
+form{
+    margin: auto;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.one{
+    height: 300px;
+} 
