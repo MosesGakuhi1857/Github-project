@@ -44,6 +44,7 @@ export class SearchUsernameComponent implements OnInit {
   this.userservice.getGithubRepoRequest(this.searchTerm).then(
     (response) => {
       this.repositories = this.userservice.userRepositories;
+      console.log(this.searchTerm)
       this.displayUserRepositoryList = true;
     },
     (error) => {
