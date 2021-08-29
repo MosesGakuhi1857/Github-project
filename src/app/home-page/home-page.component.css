@@ -7,3 +7,15 @@ span{
     border-radius: 35%;
     font-size: 15px;
 }
+
+.one{
+    height: 300px;
+} 
+
+.container{
+    margin: auto;
+    margin-left: 200px;
+    position:relative;
+    top:100px;
+}
+
