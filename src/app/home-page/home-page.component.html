@@ -1,26 +1,26 @@
 
 
-<p>{{data.name}}</p>
+<p>{{data?.name}}</p>
 
-<img src="{{data.avatar_url}}" alt="">
+<img src="{{data?.avatar_url}}" alt="">
 
-<p>Followers:{{data.followers}}</p>
-<p>Following:{{data.following}}</p>
-<p>Repositories:{{data.public_repos}}</p>
+<p>Followers:{{data?.followers}}</p>
+<p>Following:{{data?.following}}</p>
+<p>Repositories:{{data?.public_repos}}</p>
 
-<p> {{data.bio}} </p>
+<p> {{data?.bio}} </p>
 
 <ul *ngFor ="let repository of repositories; let i=index" >
     <li>
         <p>
-            {{repository.name}}
+            {{repository?.name}}
         </p>
         <p>
-            <a href="{{repository.html_url}}">view repository</a>
+            <a href="{{repository?.html_url}}">view repository</a>
         </p>
 
         <p>
-            {{repository.description}}
+            {{repository?.description}}
         </p>
 
     </li>
