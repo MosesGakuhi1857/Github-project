@@ -5,7 +5,7 @@
     <button type="submit" class="btn btn-success" (click)="searchGithubUser()">Search</button>
 </form>
 
-<ul>
+<!-- <ul>
     {{data?.name}}
     <div *ngFor="let repository of repositories; let i=index">
         <li>
@@ -14,4 +14,47 @@
         </li>
     </div>
 
-</ul>
+</ul> -->
+
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 18rem;" col-6>
+            <img src="{{data?.avatar_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="card-text">
+                    <h3>{{data?.name}}</h3>
+                    <div class="follow">
+                        <strong>{{data?.followers}}</strong> Followers
+                        <strong>{{data?.following}}</strong> Following
+                    </div>
+
+                </div>
+                <p> {{data?.bio}} </p>
+            </div>
+        </div>
+        <div class="col-6">
+            <p>Repositories <span> {{data?.public_repos}} </span> </p>
+            <hr>
+            <div class="row">
+                <div class="col-6" *ngFor=" let repository of repositories; let i=index">
+
+                    <div class="card">
+                        <h5 class="card-header"> </h5>
+                        <div class="card-body">
+                          <h5 class="card-title">{{repository?.name}}</h5>
+                          <p class="card-text">{{ repository.description ? (repository.description | slice: 0: 90) : 'No repository
+                            description' }}</p>
+                          <a href="{{repository?.html_url}}" class="btn btn-primary">view repository</a>
+                        </div>
+                      </div>
+                    
+                      
+
+                      
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
